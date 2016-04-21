@@ -1,0 +1,37 @@
+name: Workspace Preview System
+type: profile
+description: 'Getting started with the Workspace Preview System.'
+core: 8.x
+distribution:
+  name: Workspace Preview System
+
+# Required modules
+dependencies:
+  # core
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - color
+  - comment
+  - config
+  - contact
+  - contextual
+  - dblog
+  - editor
+  - field_ui
+  - file
+  - help
+  - history
+  - image
+  - node
+  - options
+  - path
+  - quickedit
+  - rdf
+  - search
+  - shortcut
+  - taxonomy
+  - toolbar
+  - views
+  - views_ui
