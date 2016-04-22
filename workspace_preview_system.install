@@ -14,5 +14,6 @@
  */
 function workspace_preview_system_install() {
   // Run the standard install.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
 }
