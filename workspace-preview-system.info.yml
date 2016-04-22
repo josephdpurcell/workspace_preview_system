@@ -4,37 +4,41 @@ description: 'Getting started with the Workspace Preview System.'
 core: 8.x
 distribution:
   name: Workspace Preview System
-
-# Required modules
 dependencies:
-  # core
+  - node
+  - history
   - block
-  - block_content
   - breakpoint
   - ckeditor
   - color
-  - comment
   - config
-  - contact
+  - comment
   - contextual
-  - dblog
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
   - editor
-  - field_ui
-  - file
   - help
-  - history
   - image
-  - node
+  - menu_ui
   - options
   - path
-  - quickedit
-  - rdf
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - dblog
   - search
   - shortcut
-  - taxonomy
   - toolbar
+  - field_ui
+  - file
+  - rdf
   - views
   - views_ui
+  - tour
+  - automated_cron
   # contrib
   - multiversion
   - deploy
@@ -43,3 +47,6 @@ dependencies:
   - diff
   - workbench_moderation
   - trash
+themes:
+  - bartik
+  - seven
