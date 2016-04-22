@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "47420061aa88d5c4ff459feb8a75f1ee",
-    "content-hash": "50e579ae8a5adf886bedd9ad3973ccb1",
+    "hash": "e65b400c0b7c11bda60857f8ae5af6d1",
+    "content-hash": "d8dcd52a7a7b4f6db77df2c974c597af",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -4470,7 +4470,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drush/drush": 20
+        "drush/drush": 20,
+        "drupal/multiversion": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
