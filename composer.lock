@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd9ef5eb46eff3a0539cbc02fbee5f2a",
-    "content-hash": "fbeb13aed30b17039b8f80a1423d0066",
+    "hash": "97961bcf9aedc9c2da88c8ce2d840166",
+    "content-hash": "0919e503787c75a4f16066994729ee3b",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -1021,6 +1021,93 @@
             "description": "Extends the revision support for content entities.",
             "homepage": "https://www.drupal.org/project/multiversion",
             "time": "2016-05-05 16:11:34"
+        },
+        {
+            "name": "drupal/replication",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/replication.git",
+                "reference": "bc2cb7ad6a97bbd624340b0574abefed7af55fc6"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/multiversion": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides services and entities types so assist with and log content replication.",
+            "homepage": "http://drupal.org/project/replication",
+            "time": "2016-05-04 15:51:43"
+        },
+        {
+            "name": "drupal/workbench_moderation",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workbench_moderation",
+                "reference": "47b107185e23df362a18a78e26361e738ffe3ccd"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/options": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides moderation states for content",
+            "homepage": "http://drupal.org/project/workbench_moderation",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2016-05-05 21:28:45"
+        },
+        {
+            "name": "drupal/workspace",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workspace",
+                "reference": "9d8202ec7fe724c85781d4b231992cbe50d187b1"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/datetime": "8.*",
+                "drupal/options": "8.*",
+                "drupal/replication": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides the ability to have multiple workspaces on a single site to facilitate things like full-site preview and content staging.",
+            "homepage": "https://www.drupal.org/project/workspace",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2016-05-04 15:59:47"
         },
         {
             "name": "drush/drush",
