@@ -41,6 +41,8 @@ dependencies:
   - automated_cron
   # contrib
   - multiversion
+  - workspace
+  - workbench_moderation
 themes:
   - bartik
   - seven
