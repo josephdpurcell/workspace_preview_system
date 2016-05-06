@@ -27,7 +27,7 @@
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^1.2",
-        "drupal/core": "^8.1.1",
+        "drupal/core": "8.1.1",
         "drush/drush": "dev-master",
         "drupal/multiversion": "dev-8.x-1.x",
         "drupal/deploy": "^8.1.0",

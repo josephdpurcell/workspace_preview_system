@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e96f2575322099a021056381bb39ba9b",
-    "content-hash": "4887b9045f934ec4ce0f9ff03233a032",
+    "hash": "89e5e8911ebb2c63aceb019593b4f1bb",
+    "content-hash": "c08ae0fdd78579af9bd861f0cc1a5a6e",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -827,16 +827,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.2.x-dev",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "40ff447fc1eebcc4c61cd814319e5b1b783e7e36"
+                "reference": "e405a10c85a874a70932fe53670993f790df746f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/40ff447fc1eebcc4c61cd814319e5b1b783e7e36",
-                "reference": "40ff447fc1eebcc4c61cd814319e5b1b783e7e36",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/e405a10c85a874a70932fe53670993f790df746f",
+                "reference": "e405a10c85a874a70932fe53670993f790df746f",
                 "shasum": ""
             },
             "require": {
@@ -960,7 +960,7 @@
                 "drupal/views_ui": "self.version"
             },
             "require-dev": {
-                "behat/mink": "~1.7",
+                "behat/mink": "~1.6",
                 "behat/mink-goutte-driver": "~1.2",
                 "jcalderonzumba/gastonjs": "~1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
@@ -990,7 +990,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-05-05 13:30:54"
+            "time": "2016-05-04 11:20:24"
         },
         {
             "name": "drupal/deploy",
@@ -1260,7 +1260,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/workbench_moderation",
-                "reference": "0c5527f911bcea52c71b8387b9fcbe9e71bc4332"
+                "reference": "f77a0a9bfff87bf5088634f40b47140766b5d68c"
             },
             "require": {
                 "drupal/core": "8.*",
@@ -1282,7 +1282,7 @@
             "keywords": [
                 "Drupal"
             ],
-            "time": "2016-04-15 20:47:27"
+            "time": "2016-05-05 18:59:33"
         },
         {
             "name": "drupal/workspace",
@@ -1321,12 +1321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "1d7380decef2fe54567f419d63f2b1ab701df558"
+                "reference": "3a83ce2f7f4ef095fe31888a4259792b980c7f3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/1d7380decef2fe54567f419d63f2b1ab701df558",
-                "reference": "1d7380decef2fe54567f419d63f2b1ab701df558",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/3a83ce2f7f4ef095fe31888a4259792b980c7f3f",
+                "reference": "3a83ce2f7f4ef095fe31888a4259792b980c7f3f",
                 "shasum": ""
             },
             "require": {
@@ -1416,7 +1416,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-05-04 14:03:05"
+            "time": "2016-05-05 18:39:46"
         },
         {
             "name": "easyrdf/easyrdf",
