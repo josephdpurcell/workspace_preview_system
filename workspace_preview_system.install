@@ -5,6 +5,10 @@
  * Enables modules and site configuration for a standard site installation.
  */
 
+use Drupal\multiversion\Entity\Workspace;
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
+
 /**
  * Implements hook_install().
  *
@@ -16,4 +20,65 @@ function workspace_preview_system_install() {
   // Run the standard install.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
+
+  $container = \Drupal::getContainer();
+  $workspace_manager = $container->get('workspace.manager');
+  $live_workspace = $workspace_manager->getActiveWorkspace();
+
+  // Make the "basic" Workspace moderatable.
+  $workspace_type_storage = \Drupal::entityManager()->getStorage('workspace_type');
+  $workspace_type = $workspace_type_storage->load('basic');
+  $workspace_type->setThirdPartySetting('workbench_moderation', 'enabled', TRUE);
+  $workspace_type->setThirdPartySetting('workbench_moderation', 'allowed_moderation_states', ['draft', 'needs_review', 'published']);
+  $workspace_type->setThirdPartySetting('workbench_moderation', 'default_moderation_state', 'draft');
+  $workspace_type->save();
+
+  // Login as admin for content creation.
+  // Note: this is to prevent errors when setting active workspace.
+  $admin = User::load(1);
+  user_login_finalize($admin);
+
+  // Create content in Live workspace.
+  $entity = Node::create([
+    'type' => 'article',
+    'title' => 'Upcoming Game: Red Team vs Blue Team',
+    'body' => 'The longest rivals in sporting history, Red Team vs Blue Team, play this Saturday in New Orleans.',
+  ]);
+  $entity->moderation_state->target_id = 'published';
+  $entity->save();
+
+  // Create content in Red Team workspace.
+  $red_workspace = Workspace::create([
+    'type' => 'basic',
+    'machine_name' => 'red_wins',
+    'label' => 'Red Wins',
+  ]);
+  $red_workspace->save();
+  $workspace_manager->setActiveWorkspace($red_workspace);
+  $entity = Node::create([
+    'type' => 'article',
+    'title' => 'Red Team Wins!',
+    'body' => 'What an unbelievable game! The Red Team wins after quadruple over time!',
+  ]);
+  $entity->moderation_state->target_id = 'published';
+  $entity->save();
+
+  // Create content in Blue Team workspace.
+  $blue_workspace = Workspace::create([
+    'type' => 'basic',
+    'machine_name' => 'blue_wins',
+    'label' => 'Blue Wins',
+  ]);
+  $blue_workspace->save();
+  $workspace_manager->setActiveWorkspace($blue_workspace);
+  $entity = Node::create([
+    'type' => 'article',
+    'title' => 'Blue Team Wins!',
+    'body' => 'What an unbelievable game! The Blue Team wins after quadruple over time!',
+  ]);
+  $entity->moderation_state->target_id = 'published';
+  $entity->save();
+
+  // Set back to the live workspace.
+  $workspace_manager->setActiveWorkspace($live_workspace);
 }
