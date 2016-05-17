@@ -4,6 +4,12 @@
     "type": "drupal-profile",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
+    "require-dev": {
+        "phing/phing": "^2.14"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -11,6 +17,12 @@
         }
     ],
     "scripts": {
+        "post-install-cmd": [
+            "./bin/phing"
+        ],
+        "post-update-cmd": [
+            "./bin/phing push"
+        ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "extra": {
@@ -27,8 +39,8 @@
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^1.2",
-        "drupal/core": "8.1.1",
-        "drush/drush": "dev-master",
+        "drupal/core": "^8.2.0",
+        "drush/drush": "^8.0",
         "drupal/multiversion": "dev-8.x-1.x",
         "drupal/workspace": "^8.1",
         "drupal/workbench_moderation": "^8.1"
