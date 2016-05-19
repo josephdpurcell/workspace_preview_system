@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0bcddec65e9caead6a1a94df4eab0dda",
-    "content-hash": "e9073f8b0423b5465551a2b6abfe8c8c",
+    "hash": "c29b07301f72c6f2010b725be1ea29cd",
+    "content-hash": "e35070fe1a96685792afba86da8b84a6",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -1111,22 +1111,22 @@
         },
         {
             "name": "drush/drush",
-            "version": "dev-master",
+            "version": "9.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "3a83ce2f7f4ef095fe31888a4259792b980c7f3f"
+                "reference": "571719f6f9f36d930654ba0cab24215ee0491eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/4e4569fedc5fa5d6a1b9c6e68dfb38629f9b0160",
-                "reference": "3a83ce2f7f4ef095fe31888a4259792b980c7f3f",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/571719f6f9f36d930654ba0cab24215ee0491eb4",
+                "reference": "571719f6f9f36d930654ba0cab24215ee0491eb4",
                 "shasum": ""
             },
             "require": {
                 "league/container": "~2",
                 "pear/console_table": "~1.3.0",
-                "php": ">=5.5.0",
+                "php": ">=5.4.5",
                 "psr/log": "~1.0",
                 "psy/psysh": "~0.6",
                 "symfony/config": "~2.2",
@@ -1158,7 +1158,7 @@
                 "psr-0": {
                     "Drush": "lib/"
                 },
-                "classmap": [
+                "files": [
                     "lib/Drush.php"
                 ]
             },
@@ -1210,7 +1210,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-05-05 18:39:46"
+            "time": "2016-03-09 21:36:58"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -4077,7 +4077,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drush/drush": 20,
         "drupal/multiversion": 20
     },
     "prefer-stable": false,
